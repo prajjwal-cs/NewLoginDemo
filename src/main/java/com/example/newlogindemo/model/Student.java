@@ -2,46 +2,28 @@
 
 Author: Prajjwal Pachauri(cypher)
 Date: 05-04-2022
-Time: 00:26
-File: Studentinfo.java 
+Time: 01:37
+File: Student.java 
 
 */
 
 package com.example.newlogindemo.model;
 
-import jakarta.persistence.*;
-
 import java.util.Objects;
 
-@Entity
 public class Student {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
-    @Column(name = "rollNumber")
     private int rollNumber;
-    @Basic
-    @Column(name = "studentName")
-    private String studentName;
-    @Basic
-    @Column(name = "username")
+    private String name;
     private String username;
-    @Basic
-    @Column(name = "email")
     private String email;
-    @Basic
-    @Column(name = "password")
     private String password;
 
     public Student(int rollNumber, String name, String username, String email, String password) {
         this.rollNumber = rollNumber;
-        this.studentName = name;
+        this.name = name;
         this.username = username;
         this.email = email;
         this.password = password;
-    }
-
-    public Student() {
-
     }
 
     public int getRollNumber() {
@@ -52,12 +34,12 @@ public class Student {
         this.rollNumber = rollNumber;
     }
 
-    public String getStudentName() {
-        return studentName;
+    public String getName() {
+        return name;
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getUsername() {
@@ -88,33 +70,20 @@ public class Student {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
-        Student that = (Student) o;
-
-        if (rollNumber != that.rollNumber) return false;
-        if (!Objects.equals(studentName, that.studentName)) return false;
-        if (!Objects.equals(username, that.username)) return false;
-        if (!Objects.equals(email, that.email)) return false;
-        if (!Objects.equals(password, that.password)) return false;
-
-        return true;
+        Student student = (Student) o;
+        return rollNumber == student.rollNumber && Objects.equals(name, student.name) && Objects.equals(username, student.username) && Objects.equals(email, student.email) && Objects.equals(password, student.password);
     }
 
     @Override
     public int hashCode() {
-        int result = rollNumber;
-        result = 31 * result + (studentName != null ? studentName.hashCode() : 0);
-        result = 31 * result + (username != null ? username.hashCode() : 0);
-        result = 31 * result + (email != null ? email.hashCode() : 0);
-        result = 31 * result + (password != null ? password.hashCode() : 0);
-        return result;
+        return Objects.hash(rollNumber, name, username, email, password);
     }
 
     @Override
     public String toString() {
-        return "Studentinfo{" +
+        return "Student{" +
                 "rollNumber=" + rollNumber +
-                ", studentName='" + studentName + '\'' +
+                ", name='" + name + '\'' +
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +

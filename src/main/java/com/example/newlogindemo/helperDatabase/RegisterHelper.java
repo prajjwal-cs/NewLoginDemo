@@ -22,7 +22,7 @@ public class RegisterHelper {
                 "INSERT INTO studentinfo (rollNumber, studentName, username, email, password) values (?, ?, ?, ?, ?)";
         PreparedStatement statement = connection.prepareStatement(insertQuery);
         statement.setInt(1, student.getRollNumber());
-        statement.setString(2, student.getStudentName());
+        statement.setString(2, student.getName());
         statement.setString(3, student.getUsername());
         statement.setString(4, student.getEmail());
         statement.setString(5, student.getPassword());
