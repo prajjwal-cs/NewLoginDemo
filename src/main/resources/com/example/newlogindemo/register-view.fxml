@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="490.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.newlogindemo.controller.RegisterController">
+   <children>
+      <Label contentDisplay="CENTER" prefHeight="39.0" prefWidth="103.0" text="Register">
+         <font>
+            <Font size="27.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="30.0" />
+         </VBox.margin>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="459.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="68.0" text="RollNumber" />
+            <TextField fx:id="rollNumberTextField">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="215.0" prefHeight="30.0" prefWidth="459.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="69.0" text="Name" />
+            <TextField fx:id="nameTextField">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="200.0" prefHeight="30.0" prefWidth="459.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="68.0" text="Username" />
+            <TextField fx:id="usernameTextField">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="185.0" prefHeight="30.0" prefWidth="459.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="68.0" text="Email" />
+            <TextField fx:id="emailTextField">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="170.0" prefHeight="30.0" prefWidth="459.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="68.0" text="Password" />
+            <PasswordField fx:id="passwordField">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </PasswordField>
+         </children>
+      </HBox>
+      <Button fx:id="registerButton" mnemonicParsing="false" onAction="#onRegisterButtonClick" text="Register">
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="registerToLoginButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onLoginButtonClick" text="Login">
+         <VBox.margin>
+            <Insets bottom="25.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>
