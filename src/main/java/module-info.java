@@ -2,7 +2,6 @@ module com.example.newlogindemo {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
-    requires jakarta.persistence;
 
 
     opens com.example.newlogindemo to javafx.fxml;
