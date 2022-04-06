@@ -24,7 +24,7 @@
                     <Insets right="10.0" />
                 </HBox.margin>
             </Label>
-            <TextField fx:id="usernameTextField" alignment="CENTER" />
+            <TextField fx:id="usernameTextField" />
         </children>
     </HBox>
     <HBox alignment="CENTER" prefHeight="60.0" prefWidth="397.0">
@@ -34,7 +34,7 @@
                     <Insets right="20.0" />
                 </HBox.margin>
             </Label>
-            <PasswordField fx:id="passwordTextField" alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+            <PasswordField fx:id="passwordTextField" prefHeight="25.0" prefWidth="153.0" />
         </children>
     </HBox>
     <Button fx:id="loginButton" onAction="#onLoginButtonClick" prefHeight="31.0" prefWidth="65.0" text="Login">
