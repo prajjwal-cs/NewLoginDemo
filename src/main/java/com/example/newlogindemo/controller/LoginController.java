@@ -47,9 +47,16 @@ public class LoginController {
         if (passwordTextField.getText().isEmpty()) {
             showAlert(Alert.AlertType.ERROR, "Error", "Password cannot be empty");
         }
-        isValidPassword();
+        //isValidPassword();
 
-
+        LoginHelper loginHelper = new LoginHelper();
+        boolean isValid = loginHelper.loginStudent(usernameTextField.getText(), passwordTextField.getText());
+        if (isValid) {
+            showAlert(Alert.AlertType.INFORMATION, "Success", "Login Successful");
+        }
+        else {
+            showAlert(Alert.AlertType.ERROR, "Error", "Invalid Username or Password");
+        }
 
     }
 
