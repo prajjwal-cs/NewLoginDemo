@@ -25,12 +25,6 @@ public class LoginHelper {
         DatabaseConnection databaseConnection = new DatabaseConnection();
 
         databaseConnection.createConnection();
-        if(databaseConnection.getConnection() == null) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("No connected");
-            alert.setContentText("Connection is not established");
-            alert.show();
-        }
         // login Query
         String LoginQuery = "SELECT * FROM studentinfo WHERE username = ? AND password = ?";
         Connection connection = databaseConnection.getConnection();
