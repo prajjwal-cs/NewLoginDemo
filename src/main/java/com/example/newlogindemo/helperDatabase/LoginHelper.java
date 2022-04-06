@@ -11,8 +11,6 @@ package com.example.newlogindemo.helperDatabase;
 
 
 import com.example.newlogindemo.database.DatabaseConnection;
-import javafx.scene.chart.XYChart;
-import javafx.scene.control.Alert;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
